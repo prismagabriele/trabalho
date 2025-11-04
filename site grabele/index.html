@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogos Indie</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Roboto',sans-serif; color:white; scroll-behavior:smooth; background-color:#121212; }
+header { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.8); display:flex; justify-content:space-between; align-items:center; padding:15px 30px; z-index:1000; }
+.logo { font-family:'Press Start 2P',cursive; font-size:18px; }
+nav ul { display:flex; list-style:none; gap:20px; }
+nav ul li a { text-decoration:none; color:white; transition:0.3s; }
+nav ul li a:hover { color:#ff6f61; }
+#theme-toggle { background:none; border:none; color:white; font-size:20px; cursor:pointer; }
+.hero { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; }
+.hero h1 { font-family:'Press Start 2P',cursive; font-size:36px; margin-bottom:20px; }
+.hero p { font-size:18px; margin-bottom:30px; }
+section { min-height:100vh; display:flex; flex-direction:column; justify-content:flex-start; align-items:flex-start; text-align:left; padding:100px 50px 50px 50px; }
+section h2 { font-size:36px; margin-bottom:20px; }
+section p { max-width:800px; font-size:20px; margin-bottom:15px; }
+.cards-container { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; padding:40px 0; }
+.card { width:220px; height:300px; background-size:cover; background-position:center; display:flex; flex-direction:column; justify-content:flex-end; padding:15px; border-radius:10px; cursor:pointer; }
+.card h3 { font-family:'Press Start 2P',cursive; color:white; font-size:18px; margin-bottom:5px; }
+.card p { color:white; font-size:14px; }
+iframe { border-radius:10px; margin-top:15px; max-width:90%; }
+.back-to-cards { margin-top: 20px; padding: 10px 20px; background-color: #ff6f61; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; transition: 0.3s; }
+.back-to-cards:hover { background-color: #ff9987; }
+footer { background-color:#121212; padding:20px; text-align:center; }
+footer .redes-sociais a { margin:0 10px; color:white; text-decoration:none; }
+body.light-mode { background-color:#f5f5f5; color:#121212; }
+body.light-mode header { background-color:rgba(255,255,255,0.9); }
+body.light-mode nav ul li a { color:#121212; }
+body.light-mode .card h3, body.light-mode .card p { color:#121212; }
+body.light-mode footer { background-color:#f5f5f5; color:#121212; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"> Jogos Indie </div>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">História</a></li>
+      <li><a href="#jogos">Jogos</a></li>
+    </ul>
+  </nav>
+  <button id="theme-toggle">🌙</button>
+</header>
+
+<section id="inicio" class="hero">
+  <h1>Descubra o mundo dos jogos indie</h1>
+  <p>Experiências únicas criadas por desenvolvedores independentes.</p>
+</section>
+
+<section id="sobre">
+  <h2>O que é indie?</h2>
+  <p>Em um cenário dominado por gigantes do entretenimento, onde os jogos de alto orçamento priorizam o lucro e a segurança da fórmula, surge o universo dos jogos Indie: uma verdadeira força de inovação. A palavra "Indie" é a abreviação de Independente, esses jogos são criados por pequenas equipes ou, às vezes, por um único desenvolvedor, sem o suporte financeiro de grandes empresas publicadoras.
+Essa liberdade criativa se traduz em títulos que frequentemente exploram narrativas complexas, estilos de arte ousados e mecânicas de jogo totalmente originais, que as grandes corporações relutariam em arriscar. Jogos Indie não apenas buscam vender milhões de cópias; eles buscam emocionar, desafiar e inovar. Eles são a prova de que a paixão e a visão artística podem superar orçamentos bilionários, entregando experiências profundamente pessoais e inesquecíveis. Mergulhar no universo Indie é buscar a essência mais pura do desenvolvimento de jogos.</p>
+</section>
+
+<section id="jogos">
+  <h2>Meu top 5 jogos indie:</h2>
+  <div class="cards-container">
+    <div class="card" style="background-image:url('./hollowknight-1638908888257.png')" data-target="#hollowknight">
+      <h3>Hollow Knight</h3>
+      <p>Clique para ver</p>
+    </div>
+    <div class="card" style="background-image:url('./dc05jjr-77d2bedb-512e-4d0c-af9c-badf1f85b638.jpg')" data-target="#cuphead">
+      <h3>Cuphead</h3>
+      <p>Clique para ver</p>
+    </div>
+    <div class="card" style="background-image:url('./cecapa.jpg')" data-target="#celeste">
+      <h3>Celeste</h3>
+      <p>Clique para ver</p>
+    </div>
+    <div class="card" style="background-image:url('./salio.jpg')" data-target="#sallyface">
+      <h3>Sally Face</h3>
+      <p>Clique para ver</p>
+    </div>
+    <div class="card" style="background-image:url('./jackt.jpg')" data-target="#hotlinemiami">
+      <h3>Hotline Miami</h3>
+      <p>Clique para ver</p>
+    </div>
+  </div>
+</section>
+
+<!-- Seções dos jogos com espaço para personagem favorito -->
+<section id="hollowknight">
+  <h2>Hollow Knight</h2>
+  <img src="./Cornifer.webp" alt="Hollow Knight" style="width:500px; border-radius:10px; margin-bottom:15px;">
+  <p>Gênero: Metroidvania / Plataforma de Ação. 
+<p>Você assume o papel do "Pequeno Cavaleiro" em uma jornada por Hallownest, um reino de insetos em ruínas assolado por uma praga misteriosa.
+ O jogo é aclamado por sua atmosfera melancólica, combate extremamente fluido e um nível de dificuldade desafiador que recompensa a persistência.</p>
+
+<p>O Que Atrai Fãs de Lógica: Exploração como um Quebra-Cabeça Espacial em Camadas</p>
+
+<p>A genialidade de Hollow Knight reside em transformar sua vasta arquitetura em um enorme quebra-cabeça de exploração. A cada nova habilidade (como um pulo duplo, um dash sombrio, ou um ataque especial),
+o jogador deve exercitar a dedução topológica. É preciso revisitar áreas antigas, raciocinar onde o novo poder pode quebrar um obstáculo ou abrir uma passagem oculta, e mapear mentalmente a sequência lógica de progressão.
+A descoberta de segredos não é acidental, mas sim o resultado de um raciocínio espacial e de memória bem-sucedidos.</p>
+
+<p>Continuação Anunciada: Sim, Hollow Knight: Silksong.</p>
+
+Status: Lançado. Silksong não é apenas um DLC, mas uma sequência completa e independente. O foco muda para a personagem Hornet em um reino totalmente novo, introduzindo um estilo de combate mais ágil e mecânicas de crafting. O projeto cresceu tanto em escopo que exigiu se tornar um jogo novo, e é um dos títulos mais aguardados de toda a comunidade gamer indie. </p>
+A equipe central é composta por três pessoas:
+
+Ari Gibson (Artista e Designer de Co-Direção)
+
+William Pellen (Designer e Programador de Co-Direção)
+
+Leth (Matthew Griffin) (Marketing e Suporte, geralmente não envolvido diretamente na codificação ou arte, mas essencial para a comunicação com a comunidade).
+
+Para o desenvolvimento do primeiro Hollow Knight, eles trabalharam com um compositor de música (Christopher Larkin) e um designer de som externo.</p>
+  <!-- Espaço para personagem favorito -->
+  <div class="video-container">
+    <video controls>
+      <source src="videoplayback (1).mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+
+  <button class="back-to-cards">⬅ Voltar aos jogos</button>
+</section>
+
+<section id="cuphead">
+  <h2>Cuphead</h2>
+  <img src="./OIP.webp" alt="Cuphead" style="width:300px; border-radius:10px; margin-bottom:15px;">
+  <p> Gênero: Run and Gun / Boss Rush. </p>
+<p>Um jogo de ação 2D focado em batalhas intensas contra chefes. Seu grande diferencial é o visual, totalmente desenhado e animado à mão no estilo vibrante e frenético dos desenhos animados da década de 1930, tornando-o uma obra de arte animada jogável.</p>
+
+<p>O Que Atrai Fãs de Lógica: Decifrando o Algoritmo de Ataques do Chefe
+
+<p>Em Cuphead, a vitória raramente vem da força bruta. Ela é conquistada através de observação, lógica sequencial e memória. Cada um dos chefes massivos é um complexo enigma de padrões de ataque. O jogador deve identificar a ordem exata das investidas, as janelas de oportunidade e as rotas de fuga. O desafio é decifrar o algoritmo do chefe e, em seguida, executar a estratégia perfeita no timing preciso. É o raciocínio lógico aplicado diretamente à ação de alta velocidade.</p>
+
+<p>Continuação Anunciada: Não, mas tem uma grande expansão.
+
+Status: O Studio MDHR lançou a aclamada expansão The Delicious Last Course (DLC) em 2022, que concluiu as aventuras originais. Embora não haja um Cuphead 2 oficial, o estúdio já manifestou interesse em continuar explorando o universo de animação 2D e foi visto contratando desenvolvedores para um "novo projeto" com foco em ação, sugerindo que uma sequência ou um sucessor espiritual pode estar em desenvolvimento inicial.</p>
+<P>O número da equipe de desenvolvimento principal (responsável pela arte, design e programação) é de aproximadamente 12 a 20 pessoas.
+
+Os fundadores e o coração criativo do Studio MDHR são os irmãos:
+
+Chad Moldenhauer (Diretor de Arte)
+
+Jared Moldenhauer (Designer Principal)
+
+Inicialmente, eles contaram apenas com a ajuda de familiares (como Marija Moldenhauer) e alguns programadores, mas o time se expandiu para incluir mais artistas, animadores e programadores para conseguir finalizar o nível de detalhe do jogo.</P>
+  
+  <div class="video-container">
+    <video controls>
+      <source src="videoplayback (2).mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+
+  <button class="back-to-cards">⬅ Voltar aos jogos</button>
+</section>
+
+<section id="celeste">
+  <h2>Celeste</h2>
+  <img src="./OIP (1).webp" alt="Celeste" style="width:300px; border-radius:10px; margin-bottom:15px;">
+  <p>Gênero: Plataforma de Precisão. Acompanha Madeline em sua tentativa de escalar a traiçoeira Montanha Celeste. O jogo é conhecido mundialmente por seus controles ultra-precisos, centenas de desafios de plataforma que exigem timing e uma narrativa madura que aborda temas de ansiedade, depressão e autoaceitação.</p>
+
+<p>O Que Atrai Fãs de Lógica: A Modelagem da Execução Perfeita</p>
+
+<p>Cada tela de Celeste é, essencialmente, um puzzle de diagrama lógico e mecânico. O sucesso não depende de reflexos brutos, mas da capacidade de planejar uma sequência de movimentos exata (saltos, dashes e escaladas) que anulem os perigos. O jogador precisa modelar mentalmente a solução, identificando os elementos interativos e a ordem dos passos, e depois buscar a execução precisa desse algoritmo. É um exercício de disciplina mental, onde cada erro ensina o caminho para a solução correta.</p>
+
+<p>Continuação Anunciada: Não.
+
+<p>Status: O criador de Celeste declarou que a história principal de Madeline foi concluída com o lançamento do Capítulo 9: Farewell. O estúdio (Extremely OK Games) estava trabalhando em um novo projeto (Earthblade) que não seria uma sequência, mas infelizmente este foi cancelado. Atualmente, a equipe trabalha em novos conceitos, mas sem planos públicos para um Celeste 2. </p>
+<p>A equipe essencial por trás de Celeste é composta por:
+
+2 Desenvolvedores principais:
+
+Maddy Thorson (Diretora de Criação e Design Principal)
+
+Noel Berry (Programador Principal)
+
+Colaboradores principais:
+
+Lena Raine (Compositora da aclamada trilha sonora)
+
+Amora B. (Artista Principal)</p>
+<div class="video-container">
+    <video controls>
+      <source src="videoplayback (3).mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+
+  <button class="back-to-cards">⬅ Voltar aos jogos</button>
+</section>
+
+<section id="sallyface">
+  <h2>Sally Face</h2>
+  <img src="./salio.jpg" alt="Sally Face" style="width:400px; border-radius:10px; margin-bottom:15px;">
+  <p>Gênero: Puzzle / Horror Psicológico. Você segue Sal Fisher, um adolescente que usa uma prótese facial, enquanto ele e seus amigos investigam mistérios sombrios e eventos sobrenaturais em seu complexo de apartamentos. O jogo se desenrola em um formato episódico, focando em uma profunda narrativa de mistério e horror.</p>
+
+<p>O Que Atrai Fãs de Lógica: Dedução Criminosa, Conexão de Pistas Narrativas.</p>
+
+<p>Sally Face é o mais puro jogo de investigação e dedução desta lista. O jogador deve conversar com vizinhos, usar itens de forma criativa e aplicar a lógica para desvendar os enigmas do enredo principal. A vitória depende da sua capacidade de juntar fragmentos de informação, filtrar fatos de superstições e conectar as pontas soltas da trama. É um exercício constante de raciocínio narrativo, onde cada pista é uma peça crucial no quebra-cabeça do mistério sobrenatural.</p>
+
+<p>Continuação Anunciada: Sim, Sally Face 2.</p>
+
+<p>Status: O criador solo, Steve Gabry, confirmou que está trabalhando ativamente na sequência. O jogo tem previsão de continuar a narrativa após o final dramático do primeiro, explorando os mistérios e as consequências das ações de Sal Fisher. Embora o desenvolvimento seja lento por ser um projeto solo, ele é altamente antecipado pela base de fãs que deseja ver a conclusão da história. </p>
+<p>Sally Face foi um projeto Solo (1 Pessoa)
+O jogo foi criado quase inteiramente por uma única pessoa, Steve Gabry, sob o nome do seu estúdio independente, Portable Moose.
+
+Steve Gabry é o responsável por:
+
+Arte: Desenho dos personagens e cenários.
+
+Design: Design de níveis, quebra-cabeças e jogabilidade.
+
+Música: Composição e produção de grande parte da trilha sonora.
+
+Roteiro: Criação da narrativa complexa e episódica.
+
+Programação: A maior parte da implementação do código.</p>
+ <div class="video-container">
+    <video controls>
+      <source src="videoplayback (4).mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+  <button class="back-to-cards">⬅ Voltar aos jogos</button>
+</section>
+
+<section id="hotlinemiami">
+  <h2>Hotline Miami</h2>
+  <img src="./R (1).jpeg" alt="Hotline Miami" style="width:300px; border-radius:10px; margin-bottom:15px;">
+  
+
+<p>Gênero: Ação Tática Top-Down (Visão de Cima). Extremamente estilizado e brutal, o jogo exige que o jogador entre em edifícios e elimine todos os inimigos rapidamente, muitas vezes morrendo com um único golpe. É famoso por sua estética neon, trilha sonora eletrônica pulsante e subversão da narrativa de violência.</p>
+
+<p>O Que Atrai Fãs de Lógica: A Matriz de Otimização Tática</p>
+
+</p>Este não é um jogo de atirar e correr, mas um puzzle de tática e otimização em tempo real. A fragilidade do protagonista força o jogador a planejar a rota de abate ideal antes de dar o primeiro passo. Você precisa calcular a ordem em que os inimigos devem ser eliminados, qual arma é a mais eficiente e o timing de cada movimento. A cada reinício após a morte (que é instantânea), o jogador aplica as lições aprendidas e refina sua solução, transformando cada fase em uma complexa matriz lógica a ser otimizada para o ranking perfeito.</p>
+
+<p>Continuação Anunciada: Sim, e já foi lançada.</p>
+
+<p>Status: O jogo Hotline Miami 2: Wrong Number foi lançado em 2015 e concluiu a história da série. A sequência expandiu a narrativa, introduzindo múltiplas facções e protagonistas jogáveis. O segundo jogo é considerado o final da saga principal, aprofundando os temas de violência, moralidade e as consequências dos eventos do primeiro jogo. Não há planos ou anúncios de um terceiro título na série.</p>
+<p>O núcleo da Dennaton Games é composto por apenas duas pessoas:
+
+Jonatan Söderström (Programação e Design)
+
+Dennis Wedin (Arte e Design)
+
+O nome "Dennaton" é uma combinação dos nomes deles: Dennis e Jonatan.
+
+Eles também contaram com colaboradores essenciais, como:
+
+Vários Músicos Independentes: A trilha sonora icônica foi uma compilação de músicas eletrônicas e synthwave de vários artistas talentosos (como M.O.O.N., Perturbator, Jasper Byrne e Scattle), que foram licenciadas ou comissionadas, e não de um único compositor exclusivo, como em Hollow Knight ou Celeste.</p>
+ 
+
+    width="560"
+    height="315"
+    <div class="video-container">
+    <video controls>
+      <source src="videoplayback.mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+
+
+  <button class="back-to-cards">⬅ Voltar aos jogos</button>
+</section>
+
+<footer>
+  <p>&copy; 2025 Jogos Indie. Todos os direitos reservados.</p>
+  <div class="redes-sociais">
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+    <a href="#">Discord</a>
+  </div>
+</footer>
+
+<script>
+// Tema claro/escuro
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  themeToggle.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+});
+
+// Cards clicáveis para rolar
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    const target = document.querySelector(card.dataset.target);
+    target.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// Botões voltar
+document.querySelectorAll('.back-to-cards').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('#jogos').scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>
